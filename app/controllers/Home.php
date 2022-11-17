@@ -1,8 +1,10 @@
 <?php
 
-class Home {
+class Home extends controller{
     public function index() {
-        echo 'home/index';
+        $this->view('template/header');
+        $this->view('home/index');
+        $this->view('template/footer');
     }
 }
 
