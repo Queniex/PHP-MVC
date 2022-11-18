@@ -3,7 +3,6 @@
 class About extends controller{
     public function index($nama = 'Quenie', $pekerjaan = 'Gaje') {
         // echo "Halo, nama saya $nama, saya adalah seorang $pekerjaan";
-
         $data['nama'] = $nama;
         $data['pekerjaan'] = $pekerjaan;
         $data['judul'] = 'About';
