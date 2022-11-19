@@ -3,6 +3,7 @@ $(function() {
     $('.tampilModalTambah').on('click', function() {
         $('#judulModal').html('Tambah Data Mahasiswa');
         $('.modal-footer button[type=submit]').html('Tambah Data');
+        $('.modal-body form').attr('action', 'http://localhost/phpmvc/public/mahasiswa/tambah');
     })
 
     $('.tampilModalUbah').on('click', function() {
