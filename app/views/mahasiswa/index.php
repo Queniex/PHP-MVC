@@ -7,15 +7,26 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
-
-            <!-- Button trigger modal -->
+        <div class="col-lg-6 mb-2">
             <button type="button" class="tampilModalTambah  btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#formModal">
-            Tambah Data(+)
+                Tambah Data(+)
             </button>
+        </div>
+    </div>
 
-            <br>
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="<?= BASEURL; ?>/mahasiswa/cari" method="POST">
+            <nav class="bg-light d-inline">
+                    <input class="form-control me-1 d-inline" style="width: 20rem;" name="keyword" id="keyword" type="text" placeholder="Masukkan Kata Kunci" aria-label="Search">
+                    <button class="btn btn-outline-dark d-inline" type="submit" id="tombolCari">Cari</button>
+            </nav>
+            </form>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-lg-6 mt-2">
             <h3>Daftar Mahasiswa</h3>
                 <ul class="list-group mt-2">
                     <li class="list-group-item active mt-2" style="width: 20rem;" aria-current="true">Universitas Starlogy</li>
