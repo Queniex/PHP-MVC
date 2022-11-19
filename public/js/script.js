@@ -10,6 +10,7 @@ $(function() {
 
         $('#judulModal').html('Ubah Data Mahasiswa');
         $('.modal-footer button[type=submit]').html('Ubah Data');
+        $('.modal-body form').attr('action', 'http://localhost/phpmvc/public/mahasiswa/ubah');
 
         const id = $(this).data('id'); // id didapatkan dari sini
 
@@ -23,6 +24,8 @@ $(function() {
                 $('.nim').val(data.nim);
                 $('.email').val(data.email);
                 $('#jurusan').find(":selected").text();
+                $('.id').val(data.id);
+                // console.log(id);
             }
         });
     })

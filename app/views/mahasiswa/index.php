@@ -41,7 +41,8 @@
                 </div>
                 <div class="modal-body">
                     
-                    <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">   
+                    <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">  
+                        <input type="hidden" name="id" id="id" class="id">
                         <div class="row g-2">
                             <div class="col-md">
                                 <div class="form-floating">
