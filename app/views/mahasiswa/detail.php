@@ -8,7 +8,7 @@
             <li class="list-group-item">Nim : <?= $data['mhs']['nim']; ?></li>
             <li class="list-group-item">Email : <?= $data['mhs']['email']; ?></li>
             <li class="list-group-item">Jurusan : <?= $data['mhs']['jurusan']; ?></li>
-            <li class="list-group-item"><a href="<?= BASEURL; ?>/mahasiswa" class="badge text-bg-info"> Kembali</a></li>
+            <li class="list-group-item"><a href="<?= BASEURL; ?>/mahasiswa" class="badge text-bg-dark text-white"> Kembali</a></li>
         </ul>
     </div>
 </div>
