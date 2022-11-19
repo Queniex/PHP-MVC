@@ -10,7 +10,7 @@
         <div class="col-lg-6">
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#formModal">
             Tambah Data(+)
             </button>
 
@@ -20,9 +20,10 @@
                 <ul class="list-group mt-2">
                     <li class="list-group-item active mt-2 w-50" aria-current="true">Universitas Starlogy</li>
                     <?php foreach ( $data['mhs'] as $mhs ) : ?>
-                        <li class="w-50 list-group-item d-flex justify-content-between align-items-start">
+                        <li class="w-50 list-group-item">
                             <?= $mhs['nama']; ?>
-                            <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-info">detail</a>
+                            <a href="<?= BASEURL ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge text-bg-danger float-end ms-2" onclick="return confirm('Yakin?');">hapus</a>
+                            <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-dark float-end ms-2">detail</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
