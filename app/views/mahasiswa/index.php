@@ -10,7 +10,7 @@
         <div class="col-lg-6">
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="tampilModalTambah  btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#formModal">
             Tambah Data(+)
             </button>
 
@@ -18,12 +18,13 @@
 
             <h3>Daftar Mahasiswa</h3>
                 <ul class="list-group mt-2">
-                    <li class="list-group-item active mt-2 w-50" aria-current="true">Universitas Starlogy</li>
+                    <li class="list-group-item active mt-2" style="width: 20rem;" aria-current="true">Universitas Starlogy</li>
                     <?php foreach ( $data['mhs'] as $mhs ) : ?>
-                        <li class="w-50 list-group-item">
+                        <li class="list-group-item" style="width: 20rem;">
                             <?= $mhs['nama']; ?>
-                            <a href="<?= BASEURL ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge text-bg-danger float-end ms-2" onclick="return confirm('Yakin?');">hapus</a>
-                            <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-dark float-end ms-2">detail</a>
+                            <a href="<?= BASEURL ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge text-bg-danger float-end ms-1" onclick="return confirm('Yakin?');">hapus</a>
+                            <a href="<?= BASEURL ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="tampilModalUbah badge text-bg-warning float-end ms-1" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs['id']; ?>">ubah</a>
+                            <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-dark float-end">detail</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -44,19 +45,19 @@
                         <div class="row g-2">
                             <div class="col-md">
                                 <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingInputGrid" name="nama" placeholder="Masukkan Nama...">
+                                <input type="text" class="nama form-control" id="floatingInputGrid" name="nama" placeholder="Masukkan Nama..." value="">
                                 <label for="floatingInputGrid">Nama Mahasiswa</label>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="form-floating">
-                                <input type="number" class="form-control" id="floatingInputGrid" name="nim" placeholder="Masukkan Nim...">
+                                <input type="number" class="nim form-control" id="floatingInputGrid" name="nim" placeholder="Masukkan Nim...">
                                 <label for="floatingInputGrid">Nim</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-floating mb-3 mt-3">
-                            <input type="text" class="form-control" id="floatingInput" name="email" placeholder="Masukkan Email...">
+                            <input type="text" class="email form-control" id="floatingInput" name="email" placeholder="Masukkan Email...">
                             <label for="floatingInput">Email</label>
                         </div>
                         <div class="form-floating">
@@ -70,7 +71,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" name="submit">Tambah Data</button>
+                            <button type="submit" class="btn btn-primary" id="" name="submit">Tambah Data</button>
                         </div>
                     </form> 
                 </div>

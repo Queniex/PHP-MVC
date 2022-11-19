@@ -53,6 +53,10 @@ class Mahasiswa extends controller{
         }
     }
 
+    public function getUbah() {
+       echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id'])); // mengubah dari data asosiatif menjadi json.
+    }
+
 }
 
 ?>
